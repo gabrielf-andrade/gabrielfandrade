@@ -118,4 +118,24 @@
   body {
     @apply bg-background text-foreground font-sans;
   }
+  html {
+    scroll-behavior: smooth;
+  }
+  /* Custom scrollbar for dark theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #2d2d2e;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #595e66;
+    border-radius: 4px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7c8188;
+  }
 }
