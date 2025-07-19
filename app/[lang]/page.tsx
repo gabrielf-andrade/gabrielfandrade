@@ -1,4 +1,4 @@
-import { PortfolioClient } from "@/components/PortfolioClient";
+import { PortfolioClient } from "@/components/portfolio-client";
 import { Language } from "@/types/definitions";
 import { getDictionary } from "./dictionaries";
 
