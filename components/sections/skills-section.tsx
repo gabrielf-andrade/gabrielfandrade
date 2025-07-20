@@ -1,0 +1,106 @@
+"use client";
+
+import { AWSIcon } from "@/components/icons/aws";
+import { CloudflareIcon } from "@/components/icons/cloudflare";
+import { DockerIcon } from "@/components/icons/docker";
+import { ExpressIcon } from "@/components/icons/express";
+import { GitHubIcon } from "@/components/icons/github";
+import { HTMLIcon } from "@/components/icons/html";
+import { JavascriptIcon } from "@/components/icons/javascript";
+import { MongoIcon } from "@/components/icons/mongo";
+import { MotionIcon } from "@/components/icons/motion";
+import { NestIcon } from "@/components/icons/nest";
+import { NextIcon } from "@/components/icons/next";
+import { NodeIcon } from "@/components/icons/node";
+import { NuxtIcon } from "@/components/icons/nuxt";
+import { ReactIcon } from "@/components/icons/react";
+import { ReactRouterIcon } from "@/components/icons/react-router";
+import { SQLIcon } from "@/components/icons/sql";
+import { TailwindIcon } from "@/components/icons/tailwind";
+import { TypescriptIcon } from "@/components/icons/typescript";
+import { VueIcon } from "@/components/icons/vue";
+import { WordpressIcon } from "@/components/icons/wordpress";
+import SkillCard from "@/components/skill-card";
+import { Dictionary } from "@/types/definitions";
+import { motion } from "motion/react";
+import { ComponentType } from "react";
+
+const iconsMap: Record<string, ComponentType<{ className?: string; fill?: string }>> = {
+  HTML: HTMLIcon,
+  React: ReactIcon,
+  "Next.js": NextIcon,
+  "React Router": ReactRouterIcon,
+  "Vue.js": VueIcon,
+  Nuxt: NuxtIcon,
+  "Tailwind CSS": TailwindIcon,
+  Motion: MotionIcon,
+  Javascript: JavascriptIcon,
+  TypeScript: TypescriptIcon,
+  "Node.js": NodeIcon,
+  Express: ExpressIcon,
+  NestJS: NestIcon,
+  WordPress: WordpressIcon,
+  MongoDB: MongoIcon,
+  SQL: SQLIcon,
+  Cloudflare: CloudflareIcon,
+  AWS: AWSIcon,
+  Docker: DockerIcon,
+  Git: GitHubIcon,
+};
+
+interface SkillsSectionProps {
+  dict: Dictionary;
+}
+
+export function SkillsSection({ dict }: SkillsSectionProps) {
+  function renderIcon(iconName: string) {
+    const IconComponent = iconsMap[iconName];
+    if (!IconComponent) return null;
+
+    const iconProps = {
+      className: "size-8",
+      ...(iconName === "Motion" && { fill: "#f7f7f7" }),
+      ...(iconName === "Express" && { fill: "#f7f7f7" }),
+    };
+
+    return <IconComponent {...iconProps} />;
+  }
+
+  return (
+    <section id="skills" className="py-16 px-4">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          viewport={{ once: true }}
+          className="text-center mb-8"
+        >
+          <h2 className="text-5xl md:text-6xl font-bold mb-6">
+            <span className="text-gradient-elegant">{dict.skills.title}</span>
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{dict.skills.subtitle}</p>
+        </motion.div>
+
+        <motion.div
+          variants={{
+            animate: {
+              transition: {
+                staggerChildren: 0.1,
+              },
+            },
+          }}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+        >
+          <motion.div className="flex flex-wrap justify-center items-center max-w-3xl gap-2 relative mx-auto">
+            {dict.skills.list.map((skill, index) => (
+              <SkillCard key={skill.name} skill={skill} delay={index * 0.07} renderIcon={renderIcon} />
+            ))}
+          </motion.div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}

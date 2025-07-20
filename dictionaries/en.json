@@ -1,6 +1,38 @@
 {
+  "nav": {
+    "projects": "Projects",
+    "education": "Education",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
   "hero": {
     "greeting": "Hello, I'm"
+  },
+  "skills": {
+    "title": "Technical Skills",
+    "subtitle": "Technologies and tools I use to bring ideas to life",
+    "list": [
+      { "name": "HTML", "category": "Frontend" },
+      { "name": "React", "category": "Frontend" },
+      { "name": "Next.js", "category": "Frontend" },
+      { "name": "React Router", "category": "Frontend" },
+      { "name": "Vue.js", "category": "Frontend" },
+      { "name": "Nuxt", "category": "Frontend" },
+      { "name": "WordPress", "category": "CMS" },
+      { "name": "Tailwind CSS", "category": "Styling" },
+      { "name": "Motion", "category": "Animation" },
+      { "name": "Javascript", "category": "Language" },
+      { "name": "TypeScript", "category": "Language" },
+      { "name": "Node.js", "category": "Backend" },
+      { "name": "Express", "category": "Backend" },
+      { "name": "NestJS", "category": "Backend" },
+      { "name": "MongoDB", "category": "Database" },
+      { "name": "SQL", "category": "Database" },
+      { "name": "AWS", "category": "Cloud" },
+      { "name": "Cloudflare", "category": "Cloud" },
+      { "name": "Docker", "category": "DevOps" },
+      { "name": "Git", "category": "Tools" }
+    ]
   },
   "footer": {
     "title": "Get in touch",
