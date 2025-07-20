@@ -35,7 +35,7 @@ export default function EducationSection({ dict }: EducationSectionProps) {
         variants={staggerContainer}
         initial="initial"
         whileInView="animate"
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.25 }}
         className="space-y-8"
       >
         {dict.education.items.map((item, index) => (
@@ -58,9 +58,6 @@ export default function EducationSection({ dict }: EducationSectionProps) {
                 </div>
                 <p>{item.description}</p>
               </CardContent>
-              {/* <CardFooter>
-                <CardAction>View Certificate</CardAction>
-              </CardFooter> */}
             </Card>
           </motion.div>
         ))}

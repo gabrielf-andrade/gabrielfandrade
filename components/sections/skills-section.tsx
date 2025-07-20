@@ -86,7 +86,7 @@ export function SkillsSection({ dict }: SkillsSectionProps) {
         variants={staggerContainer}
         initial="initial"
         whileInView="animate"
-        viewport={{ once: true }}
+        viewport={{ once: true, amount: 0.25 }}
         className="flex flex-wrap justify-center items-center max-w-3xl gap-2 relative mx-auto"
       >
         {dict.skills.list.map((skill) => (
