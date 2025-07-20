@@ -22,7 +22,7 @@ import { VueIcon } from "@/components/icons/vue";
 import { WordpressIcon } from "@/components/icons/wordpress";
 import SkillCard from "@/components/skill-card";
 import { Dictionary } from "@/types/definitions";
-import { motion } from "motion/react";
+import { motion, stagger } from "motion/react";
 import { ComponentType } from "react";
 
 const iconsMap: Record<string, ComponentType<{ className?: string; fill?: string }>> = {
@@ -51,6 +51,19 @@ const iconsMap: Record<string, ComponentType<{ className?: string; fill?: string
 interface SkillsSectionProps {
   dict: Dictionary;
 }
+
+const staggerContainer = {
+  animate: {
+    transition: {
+      delayChildren: stagger(0.07),
+    },
+  },
+};
+
+const staggerItem = {
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
+};
 
 export function SkillsSection({ dict }: SkillsSectionProps) {
   function renderIcon(iconName: string) {
@@ -83,22 +96,15 @@ export function SkillsSection({ dict }: SkillsSectionProps) {
         </motion.div>
 
         <motion.div
-          variants={{
-            animate: {
-              transition: {
-                staggerChildren: 0.1,
-              },
-            },
-          }}
+          variants={staggerContainer}
           initial="initial"
           whileInView="animate"
           viewport={{ once: true }}
+          className="flex flex-wrap justify-center items-center max-w-3xl gap-2 relative mx-auto"
         >
-          <motion.div className="flex flex-wrap justify-center items-center max-w-3xl gap-2 relative mx-auto">
-            {dict.skills.list.map((skill, index) => (
-              <SkillCard key={skill.name} skill={skill} delay={index * 0.07} renderIcon={renderIcon} />
-            ))}
-          </motion.div>
+          {dict.skills.list.map((skill) => (
+            <SkillCard key={skill.name} skill={skill} renderIcon={renderIcon} variants={staggerItem} />
+          ))}
         </motion.div>
       </div>
     </section>
