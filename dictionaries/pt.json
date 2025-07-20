@@ -6,18 +6,18 @@
     "contact": "Contato"
   },
   "hero": {
-    "greeting": "Olá, eu sou",
+    "greeting": "Olá, eu sou 👋",
     "title": "Gabriel F. Andrade",
     "subtitle": "Desenvolvedor Full Stack",
-    "description": "Criando experiências digitais excepcionais com React, Vue.js e WordPress.\nApaixonado por código limpo, soluções inovadoras e design centrado no usuário.",
+    "description": "Focado em desenvolver soluções web eficazes com tecnologias modernas, buscando resolver problemas reais e contribuir em projetos significativos.",
     "buttons": {
-      "contact": "Entre em Contato",
-      "downloadCV": "Baixar CV",
+      "sendMessage": "Entre em Contato",
+      "downloadResume": "Baixar Currículo",
       "github": "GitHub",
       "linkedin": "LinkedIn"
     },
-    "scrollToExplore": "Role para explorar",
-    "followMe": "Siga-me"
+    "scrollMessage": "Role para explorar",
+    "findMe": "Encontre-me"
   },
   "projects": {
     "title": "Projetos",
