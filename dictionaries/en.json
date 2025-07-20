@@ -8,6 +8,33 @@
   "hero": {
     "greeting": "Hello, I'm"
   },
+  "education": {
+    "title": "Education",
+    "subtitle": "My academic journey and continuous learning path in technology and innovation",
+    "items": [
+      {
+        "degree": "Bachelor of Technology in Systems Analysis and Development",
+        "institution": "UNINTER, Itajaí, SC",
+        "description": "Undergraduate degree in systems analysis and development, with a focus on programming (Python, Java, JavaScript), web and mobile development, databases, cloud computing, artificial intelligence, IT management, and agile methodologies.",
+        "period": "12/2021 - 04/2024",
+        "location": "Remote"
+      },
+      {
+        "degree": "Professional Training in Cybersecurity",
+        "institution": "Cisco Networking Academy | SENAI-SC",
+        "description": "Professional training in cybersecurity and information security. Fundamentals of Cybersecurity - 30h | CCNA 1: Introduction to Networks - 70h | CyberOps Associate - 70h.",
+        "period": "10/2023 - 02/2024",
+        "location": "Remote"
+      },
+      {
+        "degree": "Free Courses in Full Stack Web Development",
+        "institution": "Udemy | MongoDB University | AWS Training | Cisco Academy",
+        "description": "Free courses in full stack web development, including Typescript, React, Vue, Node.js, MongoDB, C# and Java.",
+        "period": "continuous",
+        "location": "Remote"
+      }
+    ]
+  },
   "skills": {
     "title": "Technical Skills",
     "subtitle": "Technologies and tools I use to bring ideas to life",

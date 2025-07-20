@@ -8,6 +8,33 @@
   "hero": {
     "greeting": "Olá, eu sou"
   },
+  "education": {
+    "title": "Educação",
+    "subtitle": "Minha jornada acadêmica e caminho de aprendizado contínuo em tecnologia e inovação",
+    "items": [
+      {
+        "degree": "Curso Superior em Tecnologia Análise e Desenvolvimento de Sistemas",
+        "institution": "UNINTER, Itajaí, SC",
+        "description": "Curso superior tecnológico com foco em desenvolvimento de sistemas, programação (Python, Java, JavaScript), web e mobile, banco de dados, computação em nuvem, inteligência artificial, gestão de TI e metodologias ágeis.",
+        "period": "12/2021 - 04/2024",
+        "location": "Remoto"
+      },
+      {
+        "degree": "Formação Profissional em Cibersegurança Cisco",
+        "institution": "Cisco Networking Academy | SENAI-SC",
+        "description": "Formação profissional em cibersegurança e segurança da informação. Fundamentos em Cibersegurança - 30h | CCNA 1: Introdução às Redes - 70h | CyberOps Associate - 70h.",
+        "period": "10/2023 - 02/2024",
+        "location": "Remoto"
+      },
+      {
+        "degree": "Cursos Livres em Desenvolvimento Web Full Stack",
+        "institution": "Udemy | MongoDB University | AWS Training | Cisco Academy",
+        "description": "Cursos livres em desenvolvimento web full stack, incluindo Typescript, React, Vue, Node.js, MongoDB, C#, Java e AWS.",
+        "period": "contínuo",
+        "location": "Remoto"
+      }
+    ]
+  },
   "skills": {
     "title": "Habilidades Técnicas",
     "subtitle": "Tecnologias e ferramentas que uso para dar vida às ideias",
