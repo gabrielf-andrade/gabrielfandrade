@@ -1,5 +1,14 @@
 {
   "hero": {
     "greeting": "Olá, eu sou"
+  },
+  "footer": {
+    "title": "Entre em contato",
+    "description": "Sinta-se livre para entrar em contato se deseja colaborar.",
+    "buttons": {
+      "sendMessage": "Enviar mensagem",
+      "downloadResume": "Baixar Currículo"
+    },
+    "copyright": "Desenvolvido por Gabriel F. Andrade. Criado com ❤️ usando Next.js, TypeScript e Motion."
   }
 }

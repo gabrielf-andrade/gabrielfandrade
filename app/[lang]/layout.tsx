@@ -1,3 +1,5 @@
+import { getDictionary } from "@/app/[lang]/dictionaries";
+import { Footer } from "@/components/layout/footer";
 import { Language } from "@/types/definitions";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -18,10 +20,14 @@ export default async function RootLayout({
   params: Promise<{ lang: Language }>;
 }>) {
   const { lang } = await params;
+  const dict = await getDictionary(lang);
 
   return (
     <html lang={lang} className="dark">
-      <body className={`${inter.variable} antialiased`}>{children}</body>
+      <body className={`${inter.variable} antialiased`}>
+        {children}
+        <Footer dict={dict} lang={lang} />
+      </body>
     </html>
   );
 }

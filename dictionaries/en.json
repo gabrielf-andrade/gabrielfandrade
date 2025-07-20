@@ -1,5 +1,14 @@
 {
   "hero": {
     "greeting": "Hello, I'm"
+  },
+  "footer": {
+    "title": "Get in touch",
+    "description": "Feel free to reach out if you'd like to collaborate.",
+    "buttons": {
+      "sendMessage": "Send a message",
+      "downloadResume": "Download Resume"
+    },
+    "copyright": "Developed by Gabriel F. Andrade. Crafted with ❤️ using Next.js, TypeScript, and Motion."
   }
 }
