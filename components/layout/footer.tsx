@@ -1,5 +1,7 @@
 "use client";
 
+import { GitHubIcon } from "@/components/icons/github";
+import { LinkedinIcon } from "@/components/icons/linkedin";
 import { Button } from "@/components/ui/button";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
 import { Dictionary, Language } from "@/types/definitions";
@@ -37,18 +39,31 @@ export function Footer({ dict, lang }: FooterProps) {
             </span>
           </p>
           <div className="flex flex-wrap justify-center gap-4 mb-12">
-            <Button size="lg" className="bg-foreground text-background" asChild>
+            <Button size="lg" className="bg-foreground text-background min-w-[192px]" asChild>
               <a href="mailto:gabrielf_andrade_dev@outlook.com">
                 <Mail className="mr-2 size-5" />
                 {dict.footer.buttons.sendMessage}
               </a>
             </Button>
-            <Button size="lg" variant="secondary" asChild>
+            <Button size="lg" variant="secondary" className="min-w-[192px]" asChild>
               <a href={lang === "en" ? "/Gabriel_Andrade_CV-EN.pdf" : "/Gabriel_Andrade_CV.pdf"}>
                 <Download className="mr-2 size-5" />
                 {dict.footer.buttons.downloadResume}
               </a>
             </Button>
+          </div>
+          <div className="flex justify-center gap-8">
+            <a href="https://github.com/gabrielf-andrade" target="_blank" rel="noopener noreferrer">
+              <GitHubIcon width={36} height={36} />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/gabriel-filipe-andrade-691226287/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedinIcon width={36} height={36} />
+            </a>
           </div>
           <div className="pt-8 border-t border-border">
             <p className="text-muted-foreground">
