@@ -6,7 +6,82 @@
     "contact": "Contact"
   },
   "hero": {
-    "greeting": "Hello, I'm"
+    "greeting": "Hello, I'm",
+    "title": "Gabriel F. Andrade",
+    "subtitle": "Full Stack Developer",
+    "description": "Crafting exceptional digital experiences with React, Vue.js, and WordPress.\nPassionate about clean code, innovative solutions, and user-centric design.",
+    "buttons": {
+      "contact": "Get In Touch",
+      "downloadCV": "Download CV",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    },
+    "scrollToExplore": "Scroll to explore",
+    "followMe": "Follow me"
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Recent projects showcasing my skills in web development and problem-solving",
+    "buttons": {
+      "code": "Code",
+      "liveDemo": "Live Demo"
+    },
+    "items": [
+      {
+        "id": "ecommerce",
+        "title": "E-Commerce Platform",
+        "description": "A complete e-commerce solution with advanced features including real-time inventory management, payment processing, and analytics dashboard.",
+        "technologies": ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL", "Redis"],
+        "github": "https://github.com",
+        "live": "https://example.com",
+        "featured": true
+      },
+      {
+        "id": "taskManagement",
+        "title": "Task Management SaaS",
+        "description": "A collaborative project management tool with real-time updates, team collaboration, and advanced reporting features.",
+        "technologies": ["Vue.js", "Node.js", "Socket.io", "MongoDB", "Express", "Docker"],
+        "github": "https://github.com",
+        "live": "https://example.com",
+        "featured": true
+      },
+      {
+        "id": "wordpressTheme",
+        "title": "Custom WordPress Theme",
+        "description": "A premium WordPress theme for creative agencies with advanced customization options, page builder integration, and SEO optimization.",
+        "technologies": ["React", "Python", "TensorFlow", "D3.js", "FastAPI", "PostgreSQL"],
+        "github": "https://github.com",
+        "live": "https://example.com",
+        "featured": true
+      },
+      {
+        "id": "aiAnalytics",
+        "title": "AI-Powered Analytics Dashboard",
+        "description": "A modern analytics platform with AI-driven insights, real-time data visualization, and predictive analysis capabilities.",
+        "technologies": ["WordPress", "PHP", "SCSS", "JavaScript", "ACF", "Gutenberg"],
+        "github": "https://github.com",
+        "live": "https://example.com",
+        "featured": false
+      },
+      {
+        "id": "bababa",
+        "title": "E-Commerce Platform",
+        "description": "A complete e-commerce solution with advanced features including real-time inventory management, payment processing, and analytics dashboard.",
+        "technologies": ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL", "Redis"],
+        "github": "https://github.com",
+        "live": "https://example.com",
+        "featured": true
+      },
+      {
+        "id": "alalal",
+        "title": "Task Management SaaS",
+        "description": "A collaborative project management tool with real-time updates, team collaboration, and advanced reporting features.",
+        "technologies": ["Vue.js", "Node.js", "Socket.io", "MongoDB", "Express", "Docker"],
+        "github": "https://github.com",
+        "live": "https://example.com",
+        "featured": true
+      }
+    ]
   },
   "education": {
     "title": "Education",

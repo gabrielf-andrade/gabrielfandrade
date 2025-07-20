@@ -6,7 +6,88 @@
     "contact": "Contato"
   },
   "hero": {
-    "greeting": "Olá, eu sou"
+    "greeting": "Olá, eu sou",
+    "title": "Gabriel F. Andrade",
+    "subtitle": "Desenvolvedor Full Stack",
+    "description": "Criando experiências digitais excepcionais com React, Vue.js e WordPress.\nApaixonado por código limpo, soluções inovadoras e design centrado no usuário.",
+    "buttons": {
+      "contact": "Entre em Contato",
+      "downloadCV": "Baixar CV",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    },
+    "scrollToExplore": "Role para explorar",
+    "followMe": "Siga-me"
+  },
+  "projects": {
+    "title": "Projetos",
+    "subtitle": "Projetos recentes que demonstram minhas habilidades em desenvolvimento web e resolução de problemas",
+    "buttons": {
+      "code": "Código",
+      "liveDemo": "Demo Ao Vivo"
+    },
+    "items": [
+      {
+        "id": "ecommerce",
+        "title": "Plataforma de E-Commerce",
+        "description": "Uma solução completa de e-commerce com recursos avançados incluindo gerenciamento de estoque em tempo real, processamento de pagamentos e painel de análises.",
+        "image": "/pexels-4.jpg",
+        "technologies": ["Next.js", "TypeScript", "Stripe", "Prisma", "PostgreSQL", "Redis"],
+        "github": "https://github.com",
+        "live": "https://example.com",
+        "featured": true
+      },
+      {
+        "id": "taskManagement",
+        "title": "SaaS de Gerenciamento de Tarefas",
+        "description": "Uma ferramenta colaborativa de gerenciamento de projetos com atualizações em tempo real, colaboração em equipe e recursos avançados de relatórios.",
+        "image": "/pexels-3.jpg",
+        "technologies": ["Vue.js", "Node.js", "Socket.io", "MongoDB", "Express", "Docker"],
+        "github": "https://github.com",
+        "live": "https://example.com",
+        "featured": true
+      },
+      {
+        "id": "wordpressTheme",
+        "title": "Tema WordPress Personalizado",
+        "description": "Um tema WordPress premium para agências criativas com opções avançadas de customização, integração com page builder e otimização SEO.",
+        "image": "/pexels-1.jpg",
+        "technologies": ["React", "Python", "TensorFlow", "D3.js", "FastAPI", "PostgreSQL"],
+        "github": "https://github.com",
+        "live": "https://example.com",
+        "featured": true
+      },
+      {
+        "id": "aiAnalytics",
+        "title": "Dashboard de Analytics com IA",
+        "description": "Uma plataforma moderna de analytics com insights orientados por IA, visualização de dados em tempo real e capacidades de análise preditiva.",
+        "image": "/pexels-2.jpg",
+        "technologies": ["WordPress", "PHP", "SCSS", "JavaScript", "ACF", "Gutenberg"],
+        "github": "https://github.com",
+        "live": "https://example.com",
+        "featured": false
+      },
+      {
+        "id": "alalal",
+        "title": "Tema WordPress Personalizado",
+        "description": "Um tema WordPress premium para agências criativas com opções avançadas de customização, integração com page builder e otimização SEO.",
+        "image": "/pexels-1.jpg",
+        "technologies": ["React", "Python", "TensorFlow", "D3.js", "FastAPI", "PostgreSQL"],
+        "github": "https://github.com",
+        "live": "https://example.com",
+        "featured": true
+      },
+      {
+        "id": "bababa",
+        "title": "Dashboard de Analytics com IA",
+        "description": "Uma plataforma moderna de analytics com insights orientados por IA, visualização de dados em tempo real e capacidades de análise preditiva.",
+        "image": "/pexels-2.jpg",
+        "technologies": ["WordPress", "PHP", "SCSS", "JavaScript", "ACF", "Gutenberg"],
+        "github": "https://github.com",
+        "live": "https://example.com",
+        "featured": false
+      }
+    ]
   },
   "education": {
     "title": "Educação",
