@@ -38,7 +38,7 @@ export default function ProjectsSection({ dict }: ProjectsSectionProps) {
           <motion.div key={project.id} variants={staggerItem} className="h-full">
             <Card className="gap-2 h-full flex flex-col">
               <CardHeader>
-                <CardTitle className="pb-1">{project.title}</CardTitle>
+                <CardTitle className="text-lg pb-1">{project.title}</CardTitle>
                 <CardDescription className="pb-4">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="flex flex-col flex-1 justify-end">

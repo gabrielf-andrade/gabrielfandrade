@@ -56,7 +56,7 @@ export default function EducationSection({ dict }: EducationSectionProps) {
                     {item.location}
                   </div>
                 </div>
-                <p>{item.description}</p>
+                <p className="text-sm sm:text-base">{item.description}</p>
               </CardContent>
             </Card>
           </motion.div>

@@ -16,7 +16,7 @@ interface FooterProps {
 export function Footer({ dict, lang }: FooterProps) {
   const { copied, copyToClipboard } = useCopyToClipboard();
   return (
-    <footer id="contact" className="py-16 px-4 border-t border-border">
+    <footer id="contact" className="pt-16 pb-8 px-4 border-t border-border">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -54,7 +54,7 @@ export function Footer({ dict, lang }: FooterProps) {
           </div>
           <div className="flex justify-center gap-8">
             <a href="https://github.com/gabrielf-andrade" target="_blank" rel="noopener noreferrer">
-              <GitHubIcon width={36} height={36} />
+              <GitHubIcon className="size-9" />
             </a>
 
             <a
@@ -62,7 +62,7 @@ export function Footer({ dict, lang }: FooterProps) {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <LinkedinIcon width={36} height={36} />
+              <LinkedinIcon className="size-9" />
             </a>
           </div>
           <div className="pt-8 border-t border-border">

@@ -73,8 +73,6 @@ export function SkillsSection({ dict }: SkillsSectionProps) {
 
     const iconProps = {
       className: "size-8",
-      ...(iconName === "Motion" && { fill: "#f7f7f7" }),
-      ...(iconName === "Express" && { fill: "#f7f7f7" }),
     };
 
     return <IconComponent {...iconProps} />;
