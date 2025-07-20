@@ -20,6 +20,7 @@ import { TailwindIcon } from "@/components/icons/tailwind";
 import { TypescriptIcon } from "@/components/icons/typescript";
 import { VueIcon } from "@/components/icons/vue";
 import { WordpressIcon } from "@/components/icons/wordpress";
+import SectionShell from "@/components/section-shell";
 import SkillCard from "@/components/skill-card";
 import { Dictionary } from "@/types/definitions";
 import { motion, stagger } from "motion/react";
@@ -80,33 +81,18 @@ export function SkillsSection({ dict }: SkillsSectionProps) {
   }
 
   return (
-    <section id="skills" className="py-16 px-4">
-      <div className="max-w-7xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center mb-8"
-        >
-          <h2 className="text-5xl md:text-6xl font-bold mb-6">
-            <span className="text-gradient-elegant">{dict.skills.title}</span>
-          </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">{dict.skills.subtitle}</p>
-        </motion.div>
-
-        <motion.div
-          variants={staggerContainer}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: true }}
-          className="flex flex-wrap justify-center items-center max-w-3xl gap-2 relative mx-auto"
-        >
-          {dict.skills.list.map((skill) => (
-            <SkillCard key={skill.name} skill={skill} renderIcon={renderIcon} variants={staggerItem} />
-          ))}
-        </motion.div>
-      </div>
-    </section>
+    <SectionShell id="skills" title={dict.skills.title} subtitle={dict.skills.subtitle}>
+      <motion.div
+        variants={staggerContainer}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        className="flex flex-wrap justify-center items-center max-w-3xl gap-2 relative mx-auto"
+      >
+        {dict.skills.list.map((skill) => (
+          <SkillCard key={skill.name} skill={skill} renderIcon={renderIcon} variants={staggerItem} />
+        ))}
+      </motion.div>
+    </SectionShell>
   );
 }
