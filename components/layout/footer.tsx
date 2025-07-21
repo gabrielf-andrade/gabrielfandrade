@@ -31,10 +31,10 @@ export function Footer({ dict, lang }: FooterProps) {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">{dict.footer.description}</p>
           <p className="text-muted-foreground sm:pb-2 flex flex-col items-center sm:flex-row justify-center gap-2">
             <span>Email: </span>
-            <span className="bg-secondary py-1 pl-3 pr-0 rounded-md">
+            <span className="flex items-center bg-secondary py-1 pl-3 pr-0 rounded-md">
               gabrielf_andrade_dev@outlook.com
               <Button size="icon" variant="ghost" onClick={() => copyToClipboard("gabrielf_andrade_dev@outlook.com")}>
-                {copied ? <Check className="size-4" /> : <Copy className="size-4" />}
+                {copied ? <Check className="size-4 text-green-600" /> : <Copy className="size-4" />}
               </Button>
             </span>
           </p>
