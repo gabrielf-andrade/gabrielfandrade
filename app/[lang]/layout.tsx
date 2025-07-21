@@ -1,5 +1,6 @@
 import { Footer } from "@/components/layout/footer";
 import { Navigation } from "@/components/layout/navigation";
+import { DictionaryProvider } from "@/contexts/dictionary-context";
 import { getDictionary } from "@/lib/dictionaries";
 import { Language } from "@/types/definitions";
 import type { Metadata } from "next";
@@ -26,9 +27,11 @@ export default async function RootLayout({
   return (
     <html lang={lang} className="dark" data-scroll-behavior="smooth">
       <body className={`${inter.variable} antialiased`}>
-        <Navigation dict={dict} />
-        {children}
-        <Footer dict={dict} lang={lang} />
+        <DictionaryProvider dictionary={dict} lang={lang}>
+          <Navigation />
+          {children}
+          <Footer />
+        </DictionaryProvider>
       </body>
     </html>
   );

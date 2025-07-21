@@ -1,12 +1,10 @@
+"use client";
+
 import SectionShell from "@/components/section-shell";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dictionary } from "@/types/definitions";
+import { useDictionary } from "@/contexts/dictionary-context";
 import { Calendar, MapPin } from "lucide-react";
 import { motion, stagger } from "motion/react";
-
-interface EducationSectionProps {
-  dict: Dictionary;
-}
 
 const fadeInLeft = {
   initial: { opacity: 0, x: -30 },
@@ -28,7 +26,8 @@ const staggerContainer = {
   },
 };
 
-export default function EducationSection({ dict }: EducationSectionProps) {
+export default function EducationSection() {
+  const { dict } = useDictionary();
   return (
     <SectionShell id="education" title={dict.education.title} subtitle={dict.education.subtitle} className="max-w-5xl">
       <motion.div

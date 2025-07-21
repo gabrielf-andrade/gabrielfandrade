@@ -1,15 +1,13 @@
+"use client";
+
 import { GitHubIcon } from "@/components/icons/github";
 import SectionShell from "@/components/section-shell";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Dictionary } from "@/types/definitions";
+import { useDictionary } from "@/contexts/dictionary-context";
 import { ExternalLink } from "lucide-react";
 import { motion, stagger } from "motion/react";
-
-interface ProjectsSectionProps {
-  dict: Dictionary;
-}
 
 const staggerContainer = {
   animate: {
@@ -24,7 +22,8 @@ const staggerItem = {
   animate: { opacity: 1, y: 0 },
 };
 
-export default function ProjectsSection({ dict }: ProjectsSectionProps) {
+export default function ProjectsSection({}) {
+  const { dict } = useDictionary();
   return (
     <SectionShell id="projects" title={dict.projects.title} subtitle={dict.projects.subtitle}>
       <motion.div

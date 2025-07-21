@@ -7,18 +7,16 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
+import { useDictionary } from "@/contexts/dictionary-context";
 import { cn } from "@/lib/utils";
 import { Check, Languages } from "lucide-react";
 import { motion } from "motion/react";
 import { usePathname, useRouter } from "next/navigation";
 
-interface LanguageSelectorProps {
-  currentLanguage: string;
-}
-
 const languages: Record<string, string> = { en: "English", pt: "Português" };
 
-export function LanguageSelector({ currentLanguage }: LanguageSelectorProps) {
+export function LanguageSelector({}) {
+  const { lang: currentLanguage } = useDictionary();
   const router = useRouter();
   const pathname = usePathname();
 

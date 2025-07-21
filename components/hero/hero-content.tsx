@@ -1,14 +1,11 @@
+"use client";
+
 import { GitHubIcon } from "@/components/icons/github";
 import { LinkedinPlainIcon } from "@/components/icons/linkedin-plain";
 import { Button } from "@/components/ui/button";
-import { Dictionary, Language } from "@/types/definitions";
+import { useDictionary } from "@/contexts/dictionary-context";
 import { Download, Mail } from "lucide-react";
 import { motion, stagger } from "motion/react";
-
-interface HeroSectionProps {
-  dict: Dictionary;
-  lang: Language;
-}
 
 const staggerContainer = {
   animate: {
@@ -23,7 +20,8 @@ const staggerItem = {
   animate: { opacity: 1, y: 0 },
 };
 
-export default function HeroContent({ dict, lang }: HeroSectionProps) {
+export default function HeroContent({}) {
+  const { dict, lang } = useDictionary();
   return (
     <motion.div
       variants={staggerContainer}

@@ -3,17 +3,13 @@
 import { GitHubIcon } from "@/components/icons/github";
 import { LinkedinIcon } from "@/components/icons/linkedin";
 import { Button } from "@/components/ui/button";
+import { useDictionary } from "@/contexts/dictionary-context";
 import { useCopyToClipboard } from "@/hooks/use-copy-to-clipboard";
-import { Dictionary, Language } from "@/types/definitions";
 import { Check, Copy, Download, Mail } from "lucide-react";
 import { motion } from "motion/react";
 
-interface FooterProps {
-  dict: Dictionary;
-  lang: Language;
-}
-
-export function Footer({ dict, lang }: FooterProps) {
+export function Footer({}) {
+  const { dict, lang } = useDictionary();
   const { copied, copyToClipboard } = useCopyToClipboard();
   return (
     <footer id="contact" className="pt-16 pb-8 px-4 border-t border-border">

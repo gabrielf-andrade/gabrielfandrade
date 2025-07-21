@@ -2,18 +2,14 @@
 
 import { DesktopNavigation } from "@/components/layout/desktop-navigation";
 import { MobileNavigation } from "@/components/layout/mobile-navigation";
+import { useDictionary } from "@/contexts/dictionary-context";
 import { useActiveSectionObserver } from "@/hooks/use-active-section-observer";
 import { useMobileMenu } from "@/hooks/use-mobile-menu";
 import { useNavigation } from "@/hooks/use-navigation";
 import { useScrollDetection } from "@/hooks/use-scroll-detection";
 
-import { Dictionary } from "@/types/definitions";
-
-interface NavigationProps {
-  dict: Dictionary;
-}
-
-export function Navigation({ dict }: NavigationProps) {
+export function Navigation({}) {
+  const { dict } = useDictionary();
   const navigationItems = [
     { id: "home", label: dict.nav.home, href: "#home" },
     { id: "education", label: dict.nav.education, href: "#education" },

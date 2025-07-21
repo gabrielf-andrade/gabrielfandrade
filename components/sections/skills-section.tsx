@@ -22,7 +22,7 @@ import { VueIcon } from "@/components/icons/vue";
 import { WordpressIcon } from "@/components/icons/wordpress";
 import SectionShell from "@/components/section-shell";
 import SkillCard from "@/components/skill-card";
-import { Dictionary } from "@/types/definitions";
+import { useDictionary } from "@/contexts/dictionary-context";
 import { motion, stagger } from "motion/react";
 import { ComponentType } from "react";
 
@@ -49,10 +49,6 @@ const iconsMap: Record<string, ComponentType<{ className?: string; fill?: string
   Git: GitHubIcon,
 };
 
-interface SkillsSectionProps {
-  dict: Dictionary;
-}
-
 const staggerContainer = {
   animate: {
     transition: {
@@ -66,7 +62,8 @@ const staggerItem = {
   animate: { opacity: 1, y: 0 },
 };
 
-export function SkillsSection({ dict }: SkillsSectionProps) {
+export function SkillsSection({}) {
+  const { dict } = useDictionary();
   function renderIcon(iconName: string) {
     const IconComponent = iconsMap[iconName];
     if (!IconComponent) return null;
