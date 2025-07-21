@@ -30,7 +30,7 @@ export default function HeroContent({ dict, lang }: HeroSectionProps) {
       initial="initial"
       whileInView="animate"
       viewport={{ once: true }}
-      className="space-y-8 mt-24 sm:mt-0"
+      className="space-y-8 mt-24 lg:mt-0"
     >
       {/* Greeting */}
       <motion.div variants={staggerItem} className="flex items-center justify-center xl:justify-start gap-3">
