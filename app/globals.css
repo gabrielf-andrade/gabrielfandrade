@@ -119,6 +119,8 @@
     @apply bg-background text-foreground font-sans;
   }
   html {
+    scrollbar-gutter: stable;
+    overflow-y: scroll;
     scroll-behavior: smooth;
   }
   /* Custom scrollbar for dark theme */

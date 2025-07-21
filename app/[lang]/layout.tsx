@@ -1,5 +1,6 @@
-import { getDictionary } from "@/app/[lang]/dictionaries";
 import { Footer } from "@/components/layout/footer";
+import { Navigation } from "@/components/layout/navigation";
+import { getDictionary } from "@/lib/dictionaries";
 import { Language } from "@/types/definitions";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -23,8 +24,9 @@ export default async function RootLayout({
   const dict = await getDictionary(lang);
 
   return (
-    <html lang={lang} className="dark">
+    <html lang={lang} className="dark" data-scroll-behavior="smooth">
       <body className={`${inter.variable} antialiased`}>
+        <Navigation dict={dict} />
         {children}
         <Footer dict={dict} lang={lang} />
       </body>
