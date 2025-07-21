@@ -9,7 +9,7 @@ export function useCopyToClipboard() {
     try {
       await navigator.clipboard.writeText(text);
       setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => setCopied(false), 3000);
       return true;
     } catch (err) {
       console.error("Falha ao copiar: ", err);
