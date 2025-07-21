@@ -11,8 +11,14 @@ export default function ScrollIndicator() {
       onClick={() => document.getElementById("education")?.scrollIntoView({ behavior: "smooth" })}
     >
       <motion.div
-        animate={{ y: [0, 10, 0] }}
-        transition={{ repeat: Number.POSITIVE_INFINITY, duration: 1, bounce: 1 }}
+        animate={{
+          y: [0, 10, 0],
+        }}
+        transition={{
+          repeat: Infinity,
+          duration: 1,
+          ease: "easeInOut",
+        }}
         className="flex flex-col items-center"
       >
         <ChevronDown className="size-8 text-muted-foreground" />

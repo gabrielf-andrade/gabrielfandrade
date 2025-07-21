@@ -47,10 +47,10 @@ export default function HeroElements() {
             initial={{ scale: 0, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
             transition={{ duration: 1, delay: 0.2 }}
-            className="relative w-32 h-32 rounded-full bg-gradient-to-br from-slate-800 to-slate-900 border-2 border-slate-600/50 backdrop-blur-sm shadow-2xl overflow-hidden"
+            className="relative w-32 h-32 rounded-full bg-gradient-to-br from-gray-800/50 to-gray-900/50 border-2 border-slate-600/50 backdrop-blur-sm shadow-2xl overflow-hidden"
           >
             {/* Planet atmosphere effect */}
-            <div className="absolute inset-1 rounded-full bg-gradient-to-br from-blue-900/10 via-purple-900/10 to-green-900/10" />
+            <div className="absolute z-50 inset-1 rounded-full bg-gradient-to-br from-blue-900/10 via-purple-900/10 to-green-900/10 opacity-50" />
 
             {/* Tech Icons moving inside planet */}
             {planetIcons.map(({ Icon, color }, index) => (
@@ -78,16 +78,16 @@ export default function HeroElements() {
             ))}
 
             {/* Planet surface details */}
-            <div className="absolute top-4 right-6 w-2 h-2 rounded-full bg-blue-400/30" />
-            <div className="absolute bottom-6 left-4 w-3 h-3 rounded-full bg-purple-400/20" />
-            <div className="absolute top-8 left-10 w-1 h-1 rounded-full bg-green-400/40" />
+            <div className="absolute top-4 right-6 w-2 h-2 rounded-full bg-blue-400/30 opacity-50" />
+            <div className="absolute bottom-6 left-4 w-3 h-3 rounded-full bg-purple-400/20 opacity-50" />
+            <div className="absolute top-8 left-10 w-1 h-1 rounded-full bg-green-400/40 opacity-50" />
           </motion.div>
 
           {/* 7 Orbital Rings with Framework Icons */}
           {orbitIcons.map(({ Icon, color }, index) => {
-            const radius = 100 + index * 28; // Órbitas mais espaçadas
-            const duration = 12 + index * 3; // Velocidades diferentes
-            const direction = index % 2 === 0 ? 360 : -360; // Direções alternadas
+            const radius = 100 + index * 28; // Orbit radius
+            const duration = 12 + index * 3; // Speed
+            const direction = index % 2 === 0 ? 360 : -360; // Direction
 
             return (
               <motion.div
@@ -122,37 +122,8 @@ export default function HeroElements() {
             );
           })}
 
-          {/* Subtle particle field around planet */}
-          <motion.div
-            animate={{ rotate: 360 }}
-            transition={{ duration: 50, repeat: Infinity, ease: "linear" }}
-            className="absolute inset-[-40px] opacity-15"
-          >
-            {[...Array(16)].map((_, i) => (
-              <motion.div
-                key={i}
-                style={{
-                  position: "absolute",
-                  top: "50%",
-                  left: "50%",
-                  transform: `rotate(${i * 22.5}deg) translateY(-120px)`,
-                }}
-                animate={{
-                  rotate: -360,
-                  scale: [0.8, 1.2, 0.8],
-                }}
-                transition={{
-                  rotate: { duration: 50, repeat: Infinity, ease: "linear" },
-                  scale: { duration: 4, repeat: Infinity, ease: "easeInOut", delay: i * 0.25 },
-                }}
-              >
-                <div className="w-0.5 h-0.5 bg-gray-400 rounded-full" />
-              </motion.div>
-            ))}
-          </motion.div>
-
           {/* Glow effect for the planet */}
-          <div className="absolute inset-8 rounded-full bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-green-900/10 blur-xl z-10" />
+          <div className="absolute inset-8 rounded-full bg-gradient-to-r from-blue-900/10 via-purple-900/10 to-green-900/10 blur-xl z-10 opacity-80" />
         </div>
       </div>
     </motion.div>
